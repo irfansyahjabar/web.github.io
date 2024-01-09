@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web</title>
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.17.4/xlsx.full.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        header {
+            background-color: #4CAF50;
+            color: #fff;
+            padding: 15px;
+            text-align: center;
+        }
+
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            padding: 20px;
+        }
+
+        .widget {
+            background-color: #fff;
+            border: 2px solid #4CAF50;
+            border-radius: 8px;
+            padding: 20px;
+            margin: 10px;
+            width: 300px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .button-container {
+            display: flex;
+            flex-wrap: wrap; /* Menyusun tombol ke dalam beberapa baris jika melebihi lebar widget */
+            justify-content: center;
+            margin-top: 20px;
+        }
+
+        .button {
+        margin: 5px;
+        padding: 10px 20px;
+        font-size: 16px;
+        cursor: pointer;
+        background-color: #4CAF50; 
+        color: rgb(255, 255, 255); 
+        border: 2px solid #4CAF50; 
+        border-radius: 5px; 
+        transition: background-color 0.3s; 
+        }
+
+        .button:hover {
+        background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Web Dashboard</h1>
+</header>
+
+<div class="container">
+    <div class="widget">
+        <h2 style="text-align: center;">Survei harga perdesaan</h2>
+        <div class="button-container">
+            <button class="button" onclick="buttonClicked(1)">Open file</button>
+        </div>
+    </div>
+    <div class="widget">
+        <h2 style="text-align: center;">Survei harga produsen</h2>
+        <div class="button-container">
+            <button class="button" onclick="buttonClicked(2)">Open file</button>
+        </div>
+    </div>
+    <div class="widget">
+        <h2 style="text-align: center;">Statistik keuangan Pemda</h2>
+        <div class="button-container">
+            <button class="button" onclick="buttonClicked(3)">Open file</button>
+        </div>
+    </div>
+    <div class="widget">
+        <h2 style="text-align: center;">Statistik Lembaga keuangan</h2>
+        <div class="button-container">
+            <button class="button" onclick="buttonClicked(4)">Open file</button>
+        </div>
+    </div>
+    <div class="widget">
+        <h2 style="text-align: center;">Badan Usaha Milik Daerah</h2>
+        <div class="button-container">
+            <button class="button" onclick="buttonClicked(5)">Open file</button>
+        </div>
+    </div>
+</div>
+
+<script>
+    function buttonClicked(buttonNumber) {
+        if (buttonNumber === 1) {
+            // Redirect to Google Drive when Button 1 is clicked
+            window.location.href = 'https://drive.google.com/drive/folders/1OrRmLzZ497Z0bK6GD8BkkGbc2ZbYs1du?usp=sharing';
+        }
+        else if (buttonNumber === 2) {
+            // Redirect to Google Drive when Button 1 is clicked
+            window.location.href = 'https://drive.google.com/drive/folders/1qeHJ3rGGFlS-L8ywvhwPZrxN899OZ-b1?usp=sharing';
+        }
+        else if (buttonNumber === 3) {
+            // Redirect to Google Drive when Button 1 is clicked
+            window.location.href = 'https://drive.google.com/drive/folders/1eTm9-13KlBsiGcR_omBLzHK-1qc4nCKr?usp=sharing';
+        }
+        else if (buttonNumber === 4) {
+            // Redirect to Google Drive when Button 1 is clicked
+            window.location.href = 'https://drive.google.com/drive/folders/1t835A27PJINE_d9m8B78sxpUyh9_8vED?usp=sharing';
+        }
+        else if (buttonNumber === 5) {
+            // Redirect to Google Drive when Button 1 is clicked
+            window.location.href = 'https://drive.google.com/drive/folders/1oGEbYosDqmDp725au-yRupermsC8KL8d?usp=sharing';
+        } else {
+            alert("Button " + buttonNumber + " clicked!");
+        }
+    }
+</script>
+
+</body>
+</html>
